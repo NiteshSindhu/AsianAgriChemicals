@@ -3,7 +3,7 @@ import styles from "../Css/navbar.module.css";
 import { useEffect, useState } from "react";
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,8 +18,11 @@ export default function Navbar() {
     window.addEventListener("load", handleResize);
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("load", handleResize);
-  }, []);
+    return () => {
+      window.removeEventListener("load", handleResize);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [showMenu]);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);

@@ -36,14 +36,14 @@ img {
   width: 85%;
   margin: auto;
 }
-/* .main > div:first-child {
-  height: 50px;
-  background-color: transparent;
-} */
+
 
 @media only screen and (max-width: 900px) {
   .icons1,
   .icons2 {
     font-size: 3.5rem;
+  }
+  .main{
+    width: 95%;
   }
 }
