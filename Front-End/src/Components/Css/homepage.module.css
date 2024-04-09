@@ -1,0 +1,49 @@
+#homepage {
+  height: 500px;
+  /* border: 2px solid blue; */
+  position: relative;
+  overflow: hidden;
+}
+
+.icons1 {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  font-size: 5rem;
+  color: rgb(195, 43, 226);
+}
+
+.icons2 {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  font-size: 5rem;
+  color: rgb(195, 43, 226);
+}
+img {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.1s ease;
+}
+.container {
+  margin: auto;
+  /* border: 2px solid yellow; */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.main {
+  width: 85%;
+  margin: auto;
+}
+/* .main > div:first-child {
+  height: 50px;
+  background-color: transparent;
+} */
+
+@media only screen and (max-width: 900px) {
+  .icons1,
+  .icons2 {
+    font-size: 3.5rem;
+  }
+}

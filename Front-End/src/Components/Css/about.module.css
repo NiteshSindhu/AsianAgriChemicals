@@ -1,0 +1,83 @@
+.aboutweb,
+.glimps {
+  margin: auto;
+  width: 70%;
+  box-sizing: border-box;
+}
+.aboutweb > h1 {
+  color: white;
+  text-align: center;
+}
+.aboutweb > p {
+  color: white;
+  font-weight: 700;
+}
+.glimps > h1 {
+  text-align: center;
+}
+#about {
+  background-color: rgb(0, 158, 227);
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+#glimps {
+  width: 100%;
+  box-sizing: border-box;
+}
+.glimps {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* #glimps > div:last-child > div {
+  border: 2px solid black;
+} */
+.container {
+  margin: auto;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr auto;
+}
+.container > div {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.icons {
+  height: 40px;
+  width: 40px;
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .glimps {
+    width: 80%;
+  }
+  .glimps > h1 {
+    font-size: 1.25rem;
+    text-align: center;
+    border: 2px solid black;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .glimps {
+    width: 80%;
+  }
+  .glimps > h1 {
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid black;
+  }
+  .container {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

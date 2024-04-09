@@ -1,0 +1,11 @@
+.container {
+  margin: auto;
+  /* border: 2px solid yellow; */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.main > div:first-child {
+  height: 50px;
+  background-color: transparent;
+}

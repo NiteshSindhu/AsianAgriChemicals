@@ -1,0 +1,120 @@
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid red;
+  background-color: rgb(222, 130, 241);
+  height: 80px;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+#navbar > .links {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+#navbar > #logo {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  position: relative;
+}
+#navbar > #logo > img {
+  height: 100%;
+  width: 100%;
+}
+#navbar > #logo > a {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 40%;
+}
+#navbar > img:hover {
+  transition: all 1s;
+  border-radius: 60%;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links a {
+  font-size: 1.35rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.hamactive a {
+  font-size: 1.35rem;
+  color: green;
+  text-decoration: none;
+  font-weight: 700;
+}
+.links a:hover,
+.hamactive a:hover {
+  color: teal;
+  font-style: oblique;
+}
+.links > .active,
+.hamactive > .active {
+  font-size: 2rem;
+  color: red;
+}
+
+.hamburger {
+  display: none; /* Initially hide hamburger menu for larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+/* Show the menu when the hamburger is clicked */
+.hamactive {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  /* background-color: transparent; */
+  position: absolute;
+  top: 90px;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  width: 50%;
+  color: red;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.hamactive a {
+  padding: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  #navbar {
+    align-items: center;
+    padding-right: 10%;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  #navbar > #logo {
+    width: 50%;
+  }
+}
